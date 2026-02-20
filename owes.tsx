@@ -38,7 +38,7 @@ export default function Owes() {
     }
   }, [type, id]);
 
-  // ✅ Add or Update You Owe
+  //  Add or Update You Owe
   const handleSubmitYouOwe = () => {
     if (!youNameTitle || !youOweAmount) {
       alert("Fill all fields");
@@ -50,14 +50,14 @@ export default function Owes() {
       if (index !== -1) {
         youOwe[index] = {
           ...youOwe[index],
-          name: youNameTitle,   // ✅ correct property
+          name: youNameTitle,   
           amount: Number(youOweAmount),
         };
       }
     } else {
       youOwe.push({
         id: Date.now(),
-        name: youNameTitle,     // ✅ must be name
+        name: youNameTitle,     
         amount: Number(youOweAmount),
         date: new Date(),
       });
@@ -66,7 +66,7 @@ export default function Owes() {
     router.back();
   };
 
-  // ✅ Add or Update Other Owe
+  
   const handleSubmitOtherOwe = () => {
     if (!otherNameTitle || !otherOweAmount) {
       alert("Fill all fields");
@@ -78,14 +78,14 @@ export default function Owes() {
       if (index !== -1) {
         otherOwe[index] = {
           ...otherOwe[index],
-          name: otherNameTitle,  // ✅ correct property
+          name: otherNameTitle,  
           amount: Number(otherOweAmount),
         };
       }
     } else {
       otherOwe.push({
         id: Date.now(),
-        name: otherNameTitle,    // ✅ must be name
+        name: otherNameTitle,    
         amount: Number(otherOweAmount),
         date: new Date(),
       });
@@ -155,4 +155,5 @@ const styles = StyleSheet.create({
     padding: 10,
     marginBottom: 15,
   },
+
 });
